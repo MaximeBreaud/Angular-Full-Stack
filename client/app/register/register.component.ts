@@ -1,3 +1,5 @@
+import { Team } from './../shared/models/team.model';
+import { TeamService } from './../services/team.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
@@ -10,6 +12,9 @@ import { ToastComponent } from '../shared/toast/toast.component';
   templateUrl: './register.component.html',
 })
 export class RegisterComponent implements OnInit {
+  teams: Team[] = [];
+  isLoading = true;
+  
 
   registerForm: FormGroup;
   username = new FormControl('', [
@@ -32,17 +37,26 @@ export class RegisterComponent implements OnInit {
   ]);
 
   constructor(private formBuilder: FormBuilder,
-              private router: Router,
-              public toast: ToastComponent,
-              private userService: UserService) { }
+    private teamService: TeamService,
+    private router: Router,
+    public toast: ToastComponent,
+    private userService: UserService) { }
 
   ngOnInit() {
+    this.getTeams();
     this.registerForm = this.formBuilder.group({
       username: this.username,
       email: this.email,
       password: this.password,
       role: this.role,
     });
+  }
+  getTeams() {
+    this.teamService.getTeams().subscribe(
+      data => this.teams = data,
+      error => console.log(error),
+      () => this.isLoading = false,
+    );
   }
 
   setClassUsername() {
