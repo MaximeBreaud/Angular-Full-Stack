@@ -1,89 +1,89 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { CatService } from '../services/cat.service';
+import { TeamService } from '../services/team.service';
 import { ToastComponent } from '../shared/toast/toast.component';
-import { Cat } from '../shared/models/cat.model';
+import { Team } from '../shared/models/team.model';
 
 @Component({
-  selector: 'app-cats',
-  templateUrl: './cats.component.html',
-  styleUrls: ['./cats.component.css'],
+  selector: 'app-teams',
+  templateUrl: './teams.component.html',
+  styleUrls: ['./teams.component.css'],
 })
-export class CatsComponent implements OnInit {
+export class TeamsComponent implements OnInit {
 
-  cat = new Cat();
-  cats: Cat[] = [];
+  team = new Team();
+  teams: Team[] = [];
   isLoading = true;
   isEditing = false;
 
-  addCatForm: FormGroup;
+  addTeamForm: FormGroup;
   name = new FormControl('', Validators.required);
   age = new FormControl('', Validators.required);
   weight = new FormControl('', Validators.required);
 
-  constructor(private catService: CatService,
+  constructor(private teamService: TeamService,
               private formBuilder: FormBuilder,
               public toast: ToastComponent) { }
 
   ngOnInit() {
-    this.getCats();
-    this.addCatForm = this.formBuilder.group({
+    this.getTeams();
+    this.addTeamForm = this.formBuilder.group({
       name: this.name,
       age: this.age,
       weight: this.weight,
     });
   }
 
-  getCats() {
-    this.catService.getCats().subscribe(
-      data => this.cats = data,
+  getTeams() {
+    this.teamService.getTeams().subscribe(
+      data => this.teams = data,
       error => console.log(error),
       () => this.isLoading = false,
     );
   }
 
-  addCat() {
-    this.catService.addCat(this.addCatForm.value).subscribe(
+  addTeam() {
+    this.teamService.addTeam(this.addTeamForm.value).subscribe(
       (res) => {
-        this.cats.push(res);
-        this.addCatForm.reset();
+        this.teams.push(res);
+        this.addTeamForm.reset();
         this.toast.setMessage('item added successfully.', 'success');
       },
       error => console.log(error),
     );
   }
 
-  enableEditing(cat: Cat) {
+  enableEditing(team: Team) {
     this.isEditing = true;
-    this.cat = cat;
+    this.team = team;
   }
 
   cancelEditing() {
     this.isEditing = false;
-    this.cat = new Cat();
+    this.team = new Team();
     this.toast.setMessage('item editing cancelled.', 'warning');
-    // reload the cats to reset the editing
-    this.getCats();
+    // reload the teams to reset the editing
+    this.getTeams();
   }
 
-  editCat(cat: Cat) {
-    this.catService.editCat(cat).subscribe(
+  editTeam(team: Team) {
+    this.teamService.editTeam(team).subscribe(
       () => {
         this.isEditing = false;
-        this.cat = cat;
+        this.team = team;
         this.toast.setMessage('item edited successfully.', 'success');
       },
       error => console.log(error),
     );
   }
 
-  deleteCat(cat: Cat) {
+  deleteTeam(team: Team) {
     if (window.confirm('Are you sure you want to permanently delete this item?')) {
-      this.catService.deleteCat(cat).subscribe(
+      this.teamService.deleteTeam(team).subscribe(
         () => {
-          const pos = this.cats.map(elem => elem._id).indexOf(cat._id);
-          this.cats.splice(pos, 1);
+          const pos = this.teams.map(elem => elem._id).indexOf(team._id);
+          this.teams.splice(pos, 1);
           this.toast.setMessage('item deleted successfully.', 'success');
         },
         error => console.log(error),

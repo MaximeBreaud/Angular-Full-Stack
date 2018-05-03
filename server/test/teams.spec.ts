@@ -3,23 +3,23 @@ import * as chaiHttp from 'chai-http';
 
 process.env.NODE_ENV = 'test';
 import { app } from '../app';
-import catModel from '../models/catModel';
+import teamModel from '../models/teamModel';
 
 const should = chai.use(chaiHttp).should();
 
-describe('cats', () => {
+describe('teams', () => {
 
   beforeEach((done) => {
-    catModel.remove({}, (err) => {
+    teamModel.remove({}, (err) => {
       done();
     });
   });
 
-  describe('Backend tests for cats', () => {
+  describe('Backend tests for teams', () => {
 
-    it('should get all the cats', (done) => {
+    it('should get all the teams', (done) => {
       chai.request(app)
-        .get('/api/cats')
+        .get('/api/teams')
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('array');
@@ -28,9 +28,9 @@ describe('cats', () => {
         });
     });
 
-    it('should get cats count', (done) => {
+    it('should get teams count', (done) => {
       chai.request(app)
-        .get('/api/cats/count')
+        .get('/api/teams/count')
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('number');
@@ -39,11 +39,11 @@ describe('cats', () => {
         });
     });
 
-    it('should create new cat', (done) => {
-      const newCat = new catModel({ name: 'Fluffy', weight: 4, age: 2 });
+    it('should create new team', (done) => {
+      const newTeam = new teamModel({ name: 'Fluffy', weight: 4, age: 2 });
       chai.request(app)
-        .post('/api/cat')
-        .send(newCat)
+        .post('/api/team')
+        .send(newTeam)
         .end((err, res) => {
           res.should.have.status(200);
           res.body.should.be.a('object');
@@ -54,28 +54,28 @@ describe('cats', () => {
         });
     });
 
-    it('should get a cat by its id', (done) => {
-      const newCat = new catModel({ name: 'cat', weight: 2, age: 4 });
-      newCat.save((error, newcat) => {
+    it('should get a team by its id', (done) => {
+      const newTeam = new teamModel({ name: 'team', weight: 2, age: 4 });
+      newTeam.save((error, newteam) => {
         chai.request(app)
-          .get(`/api/cat/${newcat.id}`)
+          .get(`/api/team/${newteam.id}`)
           .end((err, res) => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             res.body.should.have.property('name');
             res.body.should.have.property('weight');
             res.body.should.have.property('age');
-            res.body.should.have.property('_id').eql(newcat.id);
+            res.body.should.have.property('_id').eql(newteam.id);
             done();
           });
       });
     });
 
-    it('should update a cat by its id', (done) => {
-      const newCat = new catModel({ name: 'cat', weight: 2, age: 4 });
-      newCat.save((error, newcat) => {
+    it('should update a team by its id', (done) => {
+      const newTeam = new teamModel({ name: 'team', weight: 2, age: 4 });
+      newTeam.save((error, newteam) => {
         chai.request(app)
-          .put(`/api/cat/${newcat.id}`)
+          .put(`/api/team/${newteam.id}`)
           .send({ weight: 5 })
           .end((err, res) => {
             res.should.have.status(200);
@@ -84,11 +84,11 @@ describe('cats', () => {
       });
     });
 
-    it('should delete a cat by its id', (done) => {
-      const newCat = new catModel({ name: 'cat', weight: 2, age: 4 });
-      newCat.save((error, newcat) => {
+    it('should delete a team by its id', (done) => {
+      const newTeam = new teamModel({ name: 'team', weight: 2, age: 4 });
+      newTeam.save((error, newteam) => {
         chai.request(app)
-          .delete(`/api/cat/${newcat.id}`)
+          .delete(`/api/team/${newteam.id}`)
           .end((err, res) => {
             res.should.have.status(200);
             done();
