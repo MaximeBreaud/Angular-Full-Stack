@@ -1,6 +1,7 @@
 export class Team {
   _id?: string;
-  name?: string;
-  weight?: number;
-  age?: number;
+  tname: string;
+  img: string;
+  flag: string;
+  players: { name: string }[]
 }

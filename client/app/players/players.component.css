@@ -1,0 +1,11 @@
+.table td,
+.table th {
+  width: 25%;
+}
+.card {
+  background: url("https://styleguide.overwatchleague.com/5.8.0/assets/toolkit/images/background/OWL-LBG-2.jpg");
+}
+
+.logoTeam {
+  width: 2.8em;
+}
