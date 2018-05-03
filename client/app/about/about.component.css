@@ -1,4 +1,42 @@
 .container-fluid {
     display: flex;
     justify-content: space-around;
+    color: black;
+}
+
+.lsog {
+    background-image: url("https://styleguide.overwatchleague.com/5.8.0/assets/toolkit/images/background/OWL-DBG-2.jpg");
+    color: white;
+}
+.slag {
+    text-align: center;
+}
+
+.orange {
+    color: orange;
+}
+
+.bidule {
+    margin-top: 2%;
+}
+.lineorange {
+    background-color: orange;
+    height: 1px;
+}
+.sponsor {
+    font-size : 10px;
+    color: black;
+}
+.session-sponsor {
+    height: 80px;
+    width: 100px
+}
+.img-sponsor {
+    width: 15%;
+}
+.img-sponsor1 {
+    width: 5%;
+}
+.img-sponsor2 {
+    width: 25%;
 }

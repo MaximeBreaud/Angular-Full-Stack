@@ -8,10 +8,9 @@
     <table class="table table-bordered">
       <thead class="thead-light">
         <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Age</th>
-          <th scope="col">Weight</th>
-          <th scope="col">Actions</th>
+          <th scope="col">Name of Team</th>
+          <th scope="col">Team Logo</th>
+          <th scope="col">Flag</th>
         </tr>
       </thead>
       <tbody *ngIf="teams.length === 0">
@@ -22,39 +21,10 @@
       <tbody *ngIf="!isEditing">
         <tr *ngFor="let team of teams">
           <td>{{ team.tname }}</td>
-          <td><img src="{{ team.img }}" alt=""></td>
-          <td><img src="{{ team.flag }}" alt=""></td>
-          <td>
-            <button class="btn btn-sm btn-primary" (click)="enableEditing(team)"><i class="fa fa-pencil"></i> Edit</button> 
-            <button class="btn btn-sm btn-danger" (click)="deleteTeam(team)"><i class="fa fa-trash"></i> Delete</button>
-          </td>
+          <td><img class="logoTeam" src="{{ team.img }}" alt=""></td>
+          <td><img class="logoTeam" src="{{ team.flag }}" alt=""></td>
         </tr>  
       </tbody>
-      <tbody *ngIf="isEditing">
-        <tr>
-          <td colspan="4">
-            <form class="form-inline" #form="ngForm" (ngSubmit)="editTeam(team)">
-              <input class="form-control mr-2" type="text" name="name" [(ngModel)]="team.name" placeholder="Name" required>
-              <input class="form-control mr-2" type="number" name="age" [(ngModel)]="team.age" placeholder="Age" min="0" required>
-              <input class="form-control mr-2" type="number" name="weight" [(ngModel)]="team.weight" placeholder="Weight" step="any" min="0" required>
-              <button class="btn btn-sm btn-primary mr-2" type="submit" [disabled]="!form.form.valid"><i class="fa fa-floppy-o"></i> Save</button>
-              <button class="btn btn-sm btn-warning" (click)="cancelEditing()"><i class="fa fa-times"></i> Cancel</button>
-            </form>
-          </td>
-        </tr>
-      </tbody>
     </table>
-  </div>
-</div>
-
-<div class="card" *ngIf="!isEditing">
-  <h4 class="card-header">Add new team</h4>
-  <div class="card-body">
-    <form class="form-inline" [formGroup]="addTeamForm" (ngSubmit)="addTeam()">
-      <input class="form-control mr-2" type="text" name="name" formControlName="name" placeholder="Name">
-      <input class="form-control mr-2" type="number" name="weight" formControlName="weight" placeholder="Weight" step="any" min="0">
-      <input class="form-control mr-2" type="number" name="age" formControlName="age" placeholder="Age" min="0">
-      <button class="btn btn-primary" type="submit" [disabled]="!addTeamForm.valid"><i class="fa fa-floppy-o"></i> Add</button>
-    </form>
   </div>
 </div>
