@@ -8,37 +8,11 @@
   <div class="tournament__grid">
     <!-- tournament__round 1/8 -->
     <div class="tournament__round tournament__round--first-round">
-      <div class="tournament__match">
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-      </div>
-      <div class="tournament__match">
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
-        <a class="tournament__match__team" href="#">Lorem ipsum.</a>
+      <div *ngFor="let team of teams; let i = index">
+        <div class="tournament__match" *ngIf="i % 2 == 0">
+          <a class="tournament__match__team" href="#">{{ teams[i].tname }}</a>
+          <a class="tournament__match__team" href="#">{{ teams[i + 1].tname }}</a>
+        </div>
       </div>
     </div>
 
@@ -90,7 +64,6 @@
       </div>
     </div>
   </div>
-
 </div>
 
 <script>
