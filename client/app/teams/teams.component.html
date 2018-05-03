@@ -21,9 +21,9 @@
       </tbody>
       <tbody *ngIf="!isEditing">
         <tr *ngFor="let team of teams">
-          <td>{{ team.name }}</td>
-          <td>{{ team.age }}</td>
-          <td>{{ team.weight }}</td>
+          <td>{{ team.tname }}</td>
+          <td><img src="{{ team.img }}" alt=""></td>
+          <td><img src="{{ team.flag }}" alt=""></td>
           <td>
             <button class="btn btn-sm btn-primary" (click)="enableEditing(team)"><i class="fa fa-pencil"></i> Edit</button> 
             <button class="btn btn-sm btn-danger" (click)="deleteTeam(team)"><i class="fa fa-trash"></i> Delete</button>
