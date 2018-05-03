@@ -1,50 +1,87 @@
-<div class="container">
+<div class="container-fluid">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-            <i class="fa fa-home"></i> Home
+      <ul class="navbar-nav mr-auto col-12">
+        <li class="nav-item col-6">
+          <a id="title" routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <i class="fa fa-code orange"></i> Dev<span class="orange">Olympics</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item col-2">
           <a routerLink="/cats" class="nav-link" routerLinkActive="active">
-            <i class="fa fa-list"></i> Cats
+            <i class="fa fa-users"></i> Team
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item col-2">
           <a routerLink="/login" class="nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
-            <i class="fa fa-sign-in"></i> Login
+            <i class="fa fa-gamepad"></i> Players
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item col-2">
           <a routerLink="/register" class="nav-link" routerLinkActive="active" *ngIf="!auth.loggedIn">
-            <i class="fa fa-user-plus"></i> Register
+            <i class="fa fa-calendar"></i> Shedule
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item-2">
           <a routerLink="/account" class="nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
             <i class="fa fa-user"></i> Account ({{ auth.currentUser.username }})
-          </a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/admin" class="nav-link" routerLinkActive="active" *ngIf="auth.loggedIn && auth.isAdmin">
-            <i class="fa fa-lock"></i> Admin
           </a>
         </li>
         <li class="nav-item">
           <a routerLink="/logout" class="nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
             <i class="fa fa-sign-out"></i> Logout
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </nav>
+
+  <style>
+    .container-fluid {
+      padding: 0;
+      background-image: url('https://styleguide.overwatchleague.com/5.8.0/assets/toolkit/images/background/OWL-LBG-2.jpg');
+      margin-top: 0;
+    }
+    .navbar {
+      background-color: rgb(73, 72, 72);
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      margin-bottom: 3%;
+      
+      
+    }
+    .orange {
+      color: orange;
+    }
+    
+    .navbar-nav {
+      display: flex;
+      justify-content: space-between;
+    }
+    .col-6 {
+      margin-left: 4%;
+    }
+    li #title {
+      font-size: 25px;
+    }
+    li a {
+      font-size: 20px;
+    }
+    li a i {
+      color: orange;
+    }
+    #title img {
+      width: 40px;
+      margin-bottom: 8px;
+    }
+  </style>
 
   <router-outlet></router-outlet>
 

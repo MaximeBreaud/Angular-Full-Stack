@@ -1,10 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
-
+html {
+  margin-top: 0;
+  padding-top: 0;
+}
 body {
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: 'Contrail One', cursive;
+  width: 100%;
+  height: 100%;
 }
 
 .input-group {
   margin-bottom: 15px;
+}
+
+.machin {
+  background-color: white;
+}
+.machin img {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+
 }
