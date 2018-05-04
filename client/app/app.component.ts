@@ -16,7 +16,7 @@ export class AppComponent implements AfterViewChecked {
   }
 
 }
-var countDownDate = new Date("May 5, 2018 15:37:25").getTime();
+var countDownDate = new Date("May 4, 2018 19:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -34,7 +34,7 @@ var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 // Display the result in the element with id="countdown"
-document.getElementById("countdn").innerHTML = days + " Days " + hours + " Hours "
+document.getElementById("countdn").innerHTML = "FINAL : " + days + " Days " + hours + " Hours "
 + minutes + " Minutes " + seconds + " Seconds ";
 
 // If the count down is finished, write some text 
