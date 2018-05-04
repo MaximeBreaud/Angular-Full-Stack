@@ -9,7 +9,8 @@
       <ul class="navbar-nav mr-auto col-12">
         <li class="nav-item col-6">
           <a id="title" routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-            <i class="fa fa-code orange"></i> Dev<span class="orange">Olympics</span>
+            <i class="fa fa-code orange"></i> Dev
+            <span class="orange">Olympics</span>
           </a>
         </li>
         <li class="nav-item col-2">
@@ -41,70 +42,91 @@
     </div>
   </nav>
 
-  <p class="countdown" id="countdn"></p>
-
+  <div class="flexus">
+    <img class="valliant a" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMH2yeW-OP7gEDTEVo3gaM4WhlEEswM6dw49hHolWXA8JlATgS">
+    <p class="countdown" id="countdn"></p>
+    <img class="valliant b" src="http://boardgameschool.org/LootWatch/images/heroes/General/Icon/Los Angeles Gladiators.png">
+  </div>
   <router-outlet></router-outlet>
 
 </div>
 
-  <style>
-    .container-fluid {
-      padding: 0;
-      background-image: url('https://styleguide.overwatchleague.com/5.8.0/assets/toolkit/images/background/OWL-LBG-2.jpg');
-      margin-top: 0;
-    }
-    .navbar {
-      background-color: rgb(73, 72, 72);
-      width: 80%;
-      margin-right: auto;
-      margin-left: auto;
-      display: block;
-      margin-bottom: 3%;
-
-
-    }
-    .orange {
-      color: orange;
-    }
-
-    .navbar-nav {
-      display: flex;
-      justify-content: space-between;
-    }
-    .col-6 {
-      margin-left: 4%;
-    }
-    li #title {
-      font-size: 25px;
-    }
-    li a {
-      font-size: 20px;
-    }
-    li a i {
-      color: orange;
-    }
-    #title img {
-      width: 40px;
-      margin-bottom: 8px;
-    }
-    .countdown {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 10px;
-    color: rgb(175, 62, 62);
-    border: 2px solid #c2c1c1;
-    box-shadow: 2px 2px 20px #d3d2d2;
-    border-radius: 3px;
-    margin: 10px;
-    text-align: center;
-    background: rgba(255, 255, 255, 1);
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 48%, rgba(237, 237, 237, 1) 51%, rgba(255, 255, 255, 1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(48%, rgba(247, 247, 247, 1)), color-stop(51%, rgba(237, 237, 237, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 48%, rgba(237, 237, 237, 1) 51%, rgba(255, 255, 255, 1) 100%);
-    background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 48%, rgba(237, 237, 237, 1) 51%, rgba(255, 255, 255, 1) 100%);
-    background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 48%, rgba(237, 237, 237, 1) 51%, rgba(255, 255, 255, 1) 100%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 48%, rgba(237, 237, 237, 1) 51%, rgba(255, 255, 255, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+<style>
+  .flexus {
+display: flex;
+justify-content: center;
+padding: 0;
+margin: 0;
+}
+.valliant {
+width: 45px;
+height: 45px;
+margin-left: 0;
+margin-right: 0;
+}
+  .container-fluid {
+    padding: 0;
+    background-image: url('https://styleguide.overwatchleague.com/5.8.0/assets/toolkit/images/background/OWL-LBG-2.jpg');
+    margin-top: 0;
   }
-  </style>
 
+  .navbar {
+    background-color: rgb(73, 72, 72);
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+
+  .orange {
+    color: orange;
+  }
+
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .col-6 {
+    margin-left: 4%;
+  }
+
+  li #title {
+    font-size: 25px;
+  }
+
+  li a {
+    font-size: 20px;
+  }
+
+  li a i {
+    color: orange;
+  }
+
+  #title img {
+    width: 40px;
+    margin-bottom: 8px;
+  }
+
+.countdown {
+width: 400px;
+margin-top: 0;
+margin-bottom: 4%;
+height: 45px;
+text-align: center;
+font-size: 20px;
+color: rgb(175, 62, 62);
+border: 2px solid #C2C1C1;
+box-shadow: 2px 2px 20px #D3D2D2;
+border-radius: 3px;
+text-align: center;
+background: rgba(255, 255, 255, 1);
+background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 48%, rgba(237, 237, 237, 1) 51%, rgba(255, 255, 255, 1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(48%, rgba(247, 247, 247, 1)), color-stop(51%, rgba(237, 237, 237, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
+background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 48%, rgba(237, 237, 237, 1) 51%, rgba(255, 255, 255, 1) 100%);
+background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 48%, rgba(237, 237, 237, 1) 51%, rgba(255, 255, 255, 1) 100%);
+background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 48%, rgba(237, 237, 237, 1) 51%, rgba(255, 255, 255, 1) 100%);
+background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 48%, rgba(237, 237, 237, 1) 51%, rgba(255, 255, 255, 1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+}
+</style>

@@ -270,3 +270,264 @@ tabs {
     border: 10px solid #ffffff;
     box-shadow: 12px 5px 30px rgb(155, 153, 153);
 }
+
+.buy-btn {
+    width: 120px;
+    height: 50px;
+    background-color: orange;
+    border: 2px solid orange;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 40px 0 0 150px;
+}
+
+.footer-section {
+    background-color: #5e5d5d;
+    min-height: 600px;
+    width: 100%;
+    border-top: 12px 5px 30px rgb(155, 153, 153);
+    color: orange;
+    padding-top: 40px;
+}
+
+
+  
+  a{
+    color: #f2f2f2;
+    text-decoration: none;
+  }
+  
+  #footer{
+    margin-bottom: -150px;
+    clear: both;
+    background: rgb(73, 72, 72);
+    font: 12pt Georgia;
+    color:white;
+  }
+  
+  .tomottoWrap{
+    position: relative;
+    background: rgb(73, 72, 72);
+  }
+  
+  #tomotto{
+    text-align: center;
+    width: 960px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 36px;
+    margin: auto;
+  }
+  
+  .lookWrap{
+    position: relative; 
+    background-color: black;
+    float: left;
+    width: 100%;
+    
+  }
+  
+  #look{
+    margin: auto;
+    width: 700px;
+  }
+  
+  .section{
+    overflow: hidden;
+    float: left;
+    display: inline;
+    width: 160px;
+    margin: 0 15px 15px 0;
+    font: 10pt verdana;
+    line-height: 1.6em;
+    margin-top: 30px;
+    color: orange;
+  }
+  
+  .section h3{
+    font-weight: normal;
+    font: 12pt Georgia;
+    text-transform: uppercase;
+    color: #f2f2f2;
+  }
+  
+  .section a{
+    display: block;
+  }
+  
+  .legality{
+    margin: auto;
+    width: 700px;
+    text-align: center;
+    clear: both;
+    font: 10pt verdana;
+    line-height: 2em;
+    padding: 40px 0 0 0;
+  }
+
+  .quote {
+      color: orange;
+      font-size: 22px;
+  }
+  
+  #wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#wrapper {
+    padding-bottom: 50px;
+  perspective: 2500;
+	-webkit-perspective: 2500;
+	width: 800px;
+	margin: 200px auto 0 auto;
+  perspective-origin: 50% 150px;
+	-webkit-perspective-origin: 50% 150px;
+  transition: perspective, 1s;
+  -o-transition: -o-perspective, 1s;
+  -moz-transition: -moz-perspective, 1s;
+	-webkit-transition: -webkit-perspective, 1s;
+}
+
+#image:hover {
+  animation-play-state:paused;
+  -o-animation-play-state:paused;
+  -moz-animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+}
+
+
+@-webkit-keyframes spin {
+	from {
+    transform: rotateY(0);
+    -o-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+		-webkit-transform: rotateY(0);
+	}
+	to {
+    transform: rotateY(-360deg);
+    -o-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    -moz-transform: rotateY(-360deg);
+		-webkit-transform: rotateY(-360deg);
+	}
+}
+
+#image {
+	margin: 0 auto;
+	height: 300px;
+	width: 400px;
+  transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+  animation: spin 24s infinite linear;
+  -moz-animation: spin 24s infinite linear;
+  -o-animation: spin 24s infinite linear;
+	-webkit-animation: spin 24s infinite linear;
+}
+
+.image {
+	position: absolute;
+	height: 300px;
+	width: 400px;
+  border-radius: 25px;
+	background-color: rgba(0,0,0,0.6);
+	text-align: center;
+	font-size: 20em;
+	color: #fff;
+}
+
+#image > .i1 {
+  transform: translateZ(485px);
+  -moz-transform: translateZ(485px);
+  -o-transform: translateZ(485px);
+  -ms-transform: translateZ(485px);
+  -webkit-transform: translateZ(485px);
+}
+#image > .i2 {
+  transform: rotateY(45deg) translateZ(485px);
+  -moz-transform: rotateY(45deg) translateZ(485px);
+  -o-transform: rotateY(45deg) translateZ(485px);
+  -ms-transform: rotateY(45deg) translateZ(485px);
+  -webkit-transform: rotateY(45deg) translateZ(485px);
+}
+#image > .i3 {
+  transform: rotateY(90deg) translateZ(485px);
+  -moz-transform: rotateY(90deg) translateZ(485px);
+  -o-transform: rotateY(90deg) translateZ(485px);
+  -ms-transform: rotateY(90deg) translateZ(485px);
+  -webkit-transform: rotateY(90deg) translateZ(485px);
+}
+#image > .i4 {
+  transform: rotateY(135deg) translateZ(485px);
+  -moz-transform: rotateY(135deg) translateZ(485px);
+  -o-transform: rotateY(135deg) translateZ(485px);
+  -ms-transform: rotateY(135deg) translateZ(485px);
+  -webkit-transform: rotateY(135deg) translateZ(485px);
+}
+#image > .i5 {
+  transform: rotateY(180deg) translateZ(485px);
+  -moz-transform: rotateY(180deg) translateZ(485px);
+  -o-transform: rotateY(180deg) translateZ(485px);
+  -ms-transform: rotateY(180deg) translateZ(485px);
+  -webkit-transform: rotateY(180deg) translateZ(485px);
+}
+#image > .i6 {
+  transform: rotateY(225deg) translateZ(485px);
+  -moz-transform: rotateY(225deg) translateZ(485px);
+  -o-transform: rotateY(225deg) translateZ(485px);
+  -ms-transform: rotateY(225deg) translateZ(485px);
+  -webkit-transform: rotateY(225deg) translateZ(485px);
+}
+#image > .i7 {
+  transform: rotateY(270deg) translateZ(485px);
+  -moz-transform: rotateY(270deg) translateZ(485px);
+  -o-transform: rotateY(270deg) translateZ(485px);
+  -ms-transform: rotateY(270deg) translateZ(485px);
+  -webkit-transform: rotateY(270deg) translateZ(485px);
+}
+#image > .i8 {
+  transform: rotateY(315deg) translateZ(485px);
+  -moz-transform: rotateY(315deg) translateZ(485px);
+  -o-transform: rotateY(315deg) translateZ(485px);
+  -ms-transform: rotateY(315deg) translateZ(485px);
+  -webkit-transform: rotateY(315deg) translateZ(485px);
+}
+
+.logoleaguesponsor {
+    width: 70%;
+    
+}
+.logoleaguesponsor2 {
+    width: 50%;
+    margin-top: 20px;
+}
+
+.logoleaguesponsor3 {
+    width: 70%;
+    margin-top: 20px;
+}
+
+.logoleaguesponsor4 {
+    width: 70%;
+    margin-top: 30px;
+}
+
+.logoleaguesponsor5 {
+    width: 70%;
+    margin-top: 70px;
+}
+
+.logoleaguesponsor6 {
+    width: 70%;
+    margin-top: 40px;
+}
+
+.logoleaguesponsor7 {
+    width: 70%;
+    margin-top: 40px;
+}
+.challenge1 {
+    width: 10em;
+}
