@@ -162,3 +162,14 @@ tabs {
     margin: 50px auto;
     }
 }
+
+.bg-ticket {
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    min-height: 400px;
+}
+
+.img-ticket {
+    width:50%;
+    margin:10px;
+}
