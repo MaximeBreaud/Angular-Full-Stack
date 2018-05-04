@@ -183,3 +183,97 @@ tabs {
     border: 10px solid #ffffff;
     box-shadow: 12px 5px 30px rgb(155, 153, 153);
 }
+
+.buy-btn {
+    width: 120px;
+    height: 50px;
+    background-color: orange;
+    border: 2px solid orange;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 40px 0 0 150px;
+}
+
+.footer-section {
+    background-color: #5e5d5d;
+    min-height: 600px;
+    width: 100%;
+    border-top: 12px 5px 30px rgb(155, 153, 153);
+    color: orange;
+    padding-top: 40px;
+}
+
+
+  
+  a{
+    color: #f2f2f2;
+    text-decoration: none;
+  }
+  
+  #footer{
+    margin-bottom: -150px;
+    clear: both;
+    background: rgb(107, 107, 107);
+    font: 12pt Georgia;
+    color:white;
+  }
+  
+  .tomottoWrap{
+    position: relative;
+    background: rgb(107, 107, 107);
+  }
+  
+  #tomotto{
+    text-align: center;
+    width: 960px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 36px;
+    margin: auto;
+  }
+  
+  .lookWrap{
+    position: relative; 
+    background-color: black;
+    float: left;
+    width: 100%;
+    
+  }
+  
+  #look{
+    margin: auto;
+    width: 700px;
+  }
+  
+  .section{
+    overflow: hidden;
+    float: left;
+    display: inline;
+    width: 160px;
+    margin: 0 15px 15px 0;
+    font: 10pt verdana;
+    line-height: 1.6em;
+    margin-top: 30px;
+  }
+  
+  .section h3{
+    font-weight: normal;
+    font: 12pt Georgia;
+    text-transform: uppercase;
+    color: #f2f2f2;
+  }
+  
+  .section a{
+    display: block;
+  }
+  
+  .legality{
+    margin: auto;
+    width: 700px;
+    text-align: center;
+    clear: both;
+    font: 10pt verdana;
+    line-height: 2em;
+    padding: 40px 0 0 0;
+  }
