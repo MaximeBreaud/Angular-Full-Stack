@@ -4,13 +4,9 @@
     color: black;
 }
 
-.lsog {
-    background-image: url("https://styleguide.overwatchleague.com/5.8.0/assets/toolkit/images/background/OWL-DBG-2.jpg");
-    color: white;
-}
-
 .slag {
     text-align: center;
+    margin: 20px;
 }
 
 .orange {
@@ -37,11 +33,9 @@
 }
 
 li {
-    height: 50px;
     list-style-type: none;
     float: left;
     width: 200px;
-    border-bottom: 1px solid orange;
 }
 
 .widthsponsor {
@@ -62,7 +56,99 @@ li {
 
 .league {
     color: black;
-    background-color:red;
     width: 100%;
     min-height: 400px;
 }
+
+
+.slug {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    text-align: center;
+    }
+    .fruf {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    }
+    .lsog {
+    background-image: url("https://styleguide.overwatchleague.com/5.8.0/assets/toolkit/images/background/OWL-DBG-2.jpg");
+    color: white;
+    text-align: center;
+    }
+    
+    .vs {
+    width: 70%;
+    }
+    ul {
+    display: inline;
+    list-style: none;
+    }
+    .joueurs {
+    width: 70%;
+    border : 2px solid rgb(73, 72, 72);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 4px;
+    }
+    .row-fluid {
+    display: flex;
+    justify-content: space-around;
+    }
+    .titrejou {
+    text-decoration: underline;
+    color: orange;
+    text-align: center;
+    }
+    .fluff li {
+    text-align: left;
+    }
+    .elementB img {
+    width: 60%;
+    }
+    button {
+    margin-left: 20%;
+    display: flex;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 4px;
+    
+    height: 40px;
+    text-align: center;
+    }
+    button:hover {
+    background-color: orange;
+    cursor: pointer;
+    }
+    
+    .bluff {
+    list-style: none;
+    width:100%;
+    padding:30px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5%;
+    
+    }
+    .bluff li.pic {
+    float:left;
+    margin:3px;
+    background:grey;
+    cursor: pointer;
+    width: 240px;
+    height: 320px;
+    transition:0.18s linear 0s;
+    border:3px solid #FFF;
+    box-shadow:0px 0px 2px rgba(0,0,0,0.2);
+    }
+    .bluff li:hover {
+    z-index:999;
+    transform:scale(1.5);
+    box-shadow:0px 0px 10px rgba(0,0,0,0.3);
+    background:darkgrey;
+    }
+    
+    
