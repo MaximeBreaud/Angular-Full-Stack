@@ -8,6 +8,7 @@
     background-image: url("https://styleguide.overwatchleague.com/5.8.0/assets/toolkit/images/background/OWL-DBG-2.jpg");
     color: white;
 }
+
 .slag {
     text-align: center;
 }
@@ -19,24 +20,49 @@
 .bidule {
     margin-top: 2%;
 }
+
 .lineorange {
     background-color: orange;
     height: 1px;
 }
+
 .sponsor {
-    font-size : 10px;
+    font-size: 16px;
     color: black;
 }
+
 .session-sponsor {
-    height: 80px;
-    width: 100px
+    height: 50px;
+    width: 100%;
 }
+
+li {
+    height: 50px;
+    list-style-type: none;
+    float: left;
+    width: 200px;
+    border-bottom: 1px solid orange;
+}
+
+.widthsponsor {
+    width: 200px;
+}
+
 .img-sponsor {
-    width: 15%;
+    width: 80%;
 }
+
 .img-sponsor1 {
-    width: 5%;
+    width: 30%;
 }
+
 .img-sponsor2 {
-    width: 25%;
+    width: 100%;
+}
+
+.league {
+    color: black;
+    background-color:red;
+    width: 100%;
+    min-height: 400px;
 }
