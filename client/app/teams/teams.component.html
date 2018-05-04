@@ -1,0 +1,19 @@
+<app-loading [condition]="isLoading"></app-loading>
+
+<app-toast [message]="toast.message"></app-toast>
+
+<div class="card mb-3" *ngIf="!isLoading">
+  <h4 class="card-header">Current teams ({{ teams.length }})</h4>
+  <div class="card-body">
+
+    <div class="card-deck" *ngFor="let team of teams; let i = index" style="width: 20em; display: inline-block">
+      <div class="card" style="height: 10em; margin: 5px">
+        <img class="card-img-top" src="{{ teams[i].img }}" alt="team logo" style="width: 5em">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align:center">{{ teams[i].tname }}</h5>
+        </div>
+      </div>
+    </div>
+    <br/>
+  </div>
+</div>

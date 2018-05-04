@@ -1,0 +1,30 @@
+<div class="card mb-3" *ngIf="!isLoading">
+  <h3 class="card-header">All The Players :</h3>
+  <div class="card-body">
+    <table class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col" style="text-align:center">Team Affiliation</th>
+          <th scope="col" style="text-align:center">Country</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="teams.length === 0">
+        <tr>
+          <td colspan="4">There are no web developers in the DB. Find some team-mates.</td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="!isEditing">
+        <tr *ngFor="let player of players">
+          <td>{{player.name}}</td>
+          <td>
+            <img class="logoTeam" [src]="player.img" alt="">
+          </td>
+          <td>
+            <img class="logoTeam" [src]="player.flag" alt="">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
