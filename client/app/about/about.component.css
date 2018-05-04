@@ -167,9 +167,19 @@ tabs {
     background-color: rgb(236, 236, 236);
     width: 100%;
     min-height: 400px;
+    padding: 20px;
+}
+
+.bg-ticket a {
+    color: orangered;
+    font-size: 1.6rem;
+    text-shadow: 5px 5px 20px rgb(133, 131, 131);
 }
 
 .img-ticket {
-    width:50%;
+    width:100%;
     margin:10px;
+    border-radius: 5px;
+    border: 10px solid #ffffff;
+    box-shadow: 12px 5px 30px rgb(155, 153, 153);
 }
