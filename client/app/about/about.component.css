@@ -214,14 +214,14 @@ tabs {
   #footer{
     margin-bottom: -150px;
     clear: both;
-    background: rgb(107, 107, 107);
+    background: rgb(73, 72, 72);
     font: 12pt Georgia;
     color:white;
   }
   
   .tomottoWrap{
     position: relative;
-    background: rgb(107, 107, 107);
+    background: rgb(73, 72, 72);
   }
   
   #tomotto{
@@ -255,6 +255,7 @@ tabs {
     font: 10pt verdana;
     line-height: 1.6em;
     margin-top: 30px;
+    color: orange;
   }
   
   .section h3{
@@ -276,4 +277,9 @@ tabs {
     font: 10pt verdana;
     line-height: 2em;
     padding: 40px 0 0 0;
+  }
+
+  .quote {
+      color: orange;
+      font-size: 22px;
   }
