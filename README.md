@@ -1,4 +1,4 @@
-Ce hackaton à pour but de créé une page web pour une convention mondiale de developpeur. Il a été réalisé par un groupe de 4 membre de la Wild code school.
+On this hackaton we have use Angular 5, mongodb and npm for run this project
 
 
 
