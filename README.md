@@ -1,3 +1,8 @@
+Ce hackaton à pour but de créé une page web pour une convention mondiale de developpeur. Il a été réalisé par un groupe de 4 membre de la Wild code school.
+
+
+
+
 # Angular Full Stack  
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/c11813043e4ad0f0e1e7/maintainability)](https://codeclimate.com/github/riderx/Angular-Full-Stack/maintainability)
