@@ -1,4 +1,4 @@
-On this hackaton we have use Angular 5, mongodb and npm for run this project
+During this hackathon, we used Angular 5 as framework, Mongodb as database and npm as running system.
 
 
 
